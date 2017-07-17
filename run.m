@@ -20,7 +20,7 @@ sigma_x_i_star  = 0.1;
 
 params_star = [alpha_star, beta_star, delta_star, phi_star, rho_z_star, sigma_z_star, rho_x_z_star, sigma_x_z_star, rho_x_b_star, sigma_x_b_star, rho_x_i_star, sigma_x_i_star];
 
-% mex solve_ss.c;
+% mex functions/solve_ss.c;
 
 %% Setup and solve model
 
