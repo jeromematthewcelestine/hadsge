@@ -1,5 +1,5 @@
 # hadsge
-Code for Bayesian estimation of a heterogeneous agent DSGE model (MATLAB), using the Reiter (2009) method solution method. For a full description of the model and method, see https://github.com/jeromematthewcelestine/hadsge/blob/master/HADSGE.pdf.
+Code for Bayesian estimation of a heterogeneous agent DSGE model (MATLAB) using the Reiter (2009) solution method. For a full description of the model and method, see https://github.com/jeromematthewcelestine/hadsge/blob/master/HADSGE.pdf.
 
 ## Running the code
 
