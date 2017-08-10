@@ -49,7 +49,7 @@ This is to facilitate re-solving after changing parameters that don't affect the
 
 ####  Section 2: Simulating
 
-The  ``@InvestmentModel`` class also provides a method to simulate from the solved model. Gaussian innovations must be provided by the user:
+The  ``@InvestmentModel`` class provides a method to simulate from the solved model. Gaussian innovations must be provided by the user:
 
 ```
 T = 200;
@@ -57,7 +57,7 @@ innov = randn(3,T);
 data = m.simulate(innov);
 ```
 
-(Note: the measurement equation may be amendede by changing ``m.C`` and ``m.D``.)
+where ```innov``` is 3\*T because there are 3 observables. (Note: the measurement equation may be amended by changing ``m.C`` and ``m.D``.)
 
 ### Section 3: Evaluating the posterior
 
@@ -72,7 +72,7 @@ posterior_obj_fn = @(theta) m.evaluate_logposterior_for_parameters(theta, data, 
 log_posterior = posterior_obj_fn(estimation_parameters)
 ```
 
-where ``estimation_parameters`` is a vector of parameters. Note that the ``estimation_parameters`` vector is shorter than the initializing ``parameters`` vector above. The initializing ``parameters`` vector includes some parameters which are assumed fixed (i.e. $\alpha$, $\beta$, $\delta$). The division of parameters into fixed and for-estimation is easy to modify in the source.
+where ``estimation_parameters`` is a vector of parameters. Note that the ``estimation_parameters`` vector is shorter than the initializing ``parameters`` vector above. The initializing ``parameters`` vector includes some parameters which are assumed fixed (i.e. $\alpha$, $\beta$, $\delta$). The division of parameters into fixed and for-estimation is easy to modify in the source code.
 
 ### Section 4: Estimating using Metropolis-Hastings
 
@@ -92,7 +92,3 @@ parameter_means = mean(results.combined(:,1:num_parameters))
 ```
 where ``num_parameters`` is the number of estimated parameters.
 
-
-## Model
-
-...
